@@ -25,14 +25,14 @@ import Foundation
 
 public extension HandyJSON {
 
-    func toJSON() -> [String: Any]? {
+    public func toJSON() -> [String: Any]? {
         if let dict = Self._serializeAny(object: self) as? [String: Any] {
             return dict
         }
         return nil
     }
 
-    func toJSONString(prettyPrint: Bool = false) -> String? {
+    public func toJSONString(prettyPrint: Bool = false) -> String? {
 
         if let anyObject = self.toJSON() {
             if JSONSerialization.isValidJSONObject(anyObject) {
@@ -57,11 +57,11 @@ public extension HandyJSON {
 
 public extension Collection where Iterator.Element: HandyJSON {
 
-    func toJSON() -> [[String: Any]?] {
+    public func toJSON() -> [[String: Any]?] {
         return self.map{ $0.toJSON() }
     }
 
-    func toJSONString(prettyPrint: Bool = false) -> String? {
+    public func toJSONString(prettyPrint: Bool = false) -> String? {
 
         let anyArray = self.toJSON()
         if JSONSerialization.isValidJSONObject(anyArray) {

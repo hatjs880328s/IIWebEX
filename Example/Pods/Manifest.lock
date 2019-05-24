@@ -1,6 +1,6 @@
 PODS:
   - Differentiator (3.1.0)
-  - HandyJSON (5.0.0)
+  - HandyJSON (4.2.0)
   - IIAOPNBP (1.0.7):
     - IISwiftBaseUti
   - IIBaseComponents (0.1.1):
@@ -108,7 +108,7 @@ PODS:
     - IIBLL
     - IISwiftBaseUti
   - IIWebEX (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -126,7 +126,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/BLL (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -139,7 +139,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/DAL (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -152,7 +152,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/MODEL (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -165,7 +165,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/USL (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -181,7 +181,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/USL/C (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -194,7 +194,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/USL/V (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -207,7 +207,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/USL/VM (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -220,7 +220,7 @@ PODS:
     - RxDataSources (= 3.1.0)
     - RxSwift (= 4.3.1)
   - IIWebEX/Utility (0.1.0):
-    - HandyJSON
+    - HandyJSON (= 4.2.0)
     - IIAOPNBP
     - IIBaseComponents
     - IIBLL
@@ -272,7 +272,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   IIAOPNBP: 1feb9be7babaff2b2556d226b67345026fc44529
   IIBaseComponents: 552c33042e4a7a9850d30e15604c5c1f17b2ea3c
   IIBLL: d19bd39862eb72f305b74824b905bc7fa3508062
@@ -282,7 +282,7 @@ SPEC CHECKSUMS:
   IIOCUtis: 76d52ce57744e0127d0a6d2b50459c1ca122a2e2
   IISwiftBaseUti: ab79a0ba7044a02c7252c637f406bec58a517b5b
   IIUIAndBizConfig: 5d2f25df70e582ccd27b35df106e02e129f71adc
-  IIWebEX: cd08a12ad60452d95b81474e3bbb655a824bc433
+  IIWebEX: 89c12f28fd3333fe18688e0f6bf12a013a50621c
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
