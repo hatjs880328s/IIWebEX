@@ -35,7 +35,7 @@ cisco - webex
 
   # s.source_files = 'IIWebEX/Classes/**/*'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
 
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
