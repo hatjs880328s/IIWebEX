@@ -108,6 +108,7 @@ PODS:
     - IIBLL
     - IISwiftBaseUti
   - IIWebEX (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -122,10 +123,12 @@ PODS:
     - IIWebEX/MODEL (= 0.1.0)
     - IIWebEX/USL (= 0.1.0)
     - IIWebEX/Utility (= 0.1.0)
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/BLL (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -135,10 +138,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/DAL (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -148,10 +153,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/MODEL (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -161,10 +168,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/USL (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -177,10 +186,12 @@ PODS:
     - IIWebEX/USL/C (= 0.1.0)
     - IIWebEX/USL/V (= 0.1.0)
     - IIWebEX/USL/VM (= 0.1.0)
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/USL/C (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -190,10 +201,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/USL/V (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -203,10 +216,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/USL/VM (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -216,10 +231,12 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - IIWebEX/Utility (0.1.0):
+    - Differentiator (= 4.0.1)
     - HandyJSON
     - IIAOPNBP
     - IIBaseComponents
@@ -229,9 +246,10 @@ PODS:
     - IIOCUtis
     - IISwiftBaseUti
     - IIUIAndBizConfig
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
+    - RxCocoa (= 5.0.0)
+    - RxDataSources (= 4.0.1)
+    - RxRelay (= 5.0.0)
+    - RxSwift (= 5.0.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -286,7 +304,7 @@ SPEC CHECKSUMS:
   IIOCUtis: 76d52ce57744e0127d0a6d2b50459c1ca122a2e2
   IISwiftBaseUti: ab79a0ba7044a02c7252c637f406bec58a517b5b
   IIUIAndBizConfig: 5d2f25df70e582ccd27b35df106e02e129f71adc
-  IIWebEX: 23f5d2dfc047efc05d2b33a46c06eeb18c0c671b
+  IIWebEX: ed0a56cba16a6eeaa806abcb6c98d21e7302fc17
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
@@ -296,4 +314,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ae532f272888457b184c16be4f9c148dcd00e1e1
 
-COCOAPODS: 1.7.0.rc.2
+COCOAPODS: 1.7.0

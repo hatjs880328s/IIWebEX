@@ -35,6 +35,8 @@ cisco - webex
 
   # s.source_files = 'IIWebEX/Classes/**/*'
 
+  s.swift_version = '4.2'
+
 
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
 
@@ -66,7 +68,6 @@ cisco - webex
       end
   end
 
-  s.swift_version = '5.0'
 
   s.dependency 'IISwiftBaseUti'
   s.dependency 'IIUIAndBizConfig'
@@ -78,9 +79,12 @@ cisco - webex
   s.dependency 'IIBaseComponents'
   
   s.dependency 'HandyJSON'
-  s.dependency 'RxSwift'
-  s.dependency 'RxCocoa'
-  s.dependency 'RxDataSources'
+  s.dependency 'RxSwift', '5.0.0'
+  s.dependency 'RxCocoa', '5.0.0'
+  s.dependency 'RxRelay', '5.0.0'
+  s.dependency 'RxDataSources', '4.0.1'
+  s.dependency 'Differentiator', '4.0.1'
+
 
 
 end

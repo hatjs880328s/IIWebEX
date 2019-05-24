@@ -18,10 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
+  "swift_versions": "4.2",
   "pod_target_xcconfig": {
     "DEFINES_MODULE": "YES"
   },
-  "swift_versions": "5.0",
   "dependencies": {
     "IISwiftBaseUti": [
 
@@ -51,13 +51,19 @@
 
     ],
     "RxSwift": [
-
+      "5.0.0"
     ],
     "RxCocoa": [
-
+      "5.0.0"
+    ],
+    "RxRelay": [
+      "5.0.0"
     ],
     "RxDataSources": [
-
+      "4.0.1"
+    ],
+    "Differentiator": [
+      "4.0.1"
     ]
   },
   "subspecs": [
@@ -95,5 +101,5 @@
       ]
     }
   ],
-  "swift_version": "5.0"
+  "swift_version": "4.2"
 }
