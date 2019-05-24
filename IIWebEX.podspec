@@ -66,7 +66,7 @@ cisco - webex
       end
   end
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
   s.dependency 'IISwiftBaseUti'
   s.dependency 'IIUIAndBizConfig'

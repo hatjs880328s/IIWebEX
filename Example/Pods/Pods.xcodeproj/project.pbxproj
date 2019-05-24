@@ -6094,31 +6094,6 @@
 			};
 			name = Debug;
 		};
-		0F22D3805AF7F6C2DF5A1D8D7B0C9F25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28295295AFD1347B54BFCFD7E5CAFBEB /* SDWebImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SDWebImage;
-				PRODUCT_NAME = SDWebImage;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		16C6F900C0953FF41F540E2CB991B902 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 015F93C6019C6123EE37F11E1309B1F0 /* RxRelay.xcconfig */;
@@ -6140,32 +6115,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1719656293EDC14205E04C7F1B52E8C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17B534D3452E543475E559544F26FA9B /* IIBLL.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/IIBLL/IIBLL-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/IIBLL/IIBLL.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = IIBLL;
-				PRODUCT_NAME = IIBLL;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -6293,6 +6242,32 @@
 			};
 			name = Release;
 		};
+		344FD39B171309F97AE288AAFAAAE3F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B534D3452E543475E559544F26FA9B /* IIBLL.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IIBLL/IIBLL-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/IIBLL/IIBLL.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IIBLL;
+				PRODUCT_NAME = IIBLL;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		359A4B5941CF360BAA9A57A86CEDA278 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD206F7FCEAF01B58E625CA1D355C678 /* Pods-IIWebEX_Tests.release.xcconfig */;
@@ -6336,6 +6311,30 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B2E664F911D77393382489E27B2E02E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28295295AFD1347B54BFCFD7E5CAFBEB /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -6493,6 +6492,32 @@
 			};
 			name = Debug;
 		};
+		7F4F023FE809F1C89C90A181AD039C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B5C49B96DCC5121CD7B22BC7666A069 /* IIWebEX.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IIWebEX/IIWebEX-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/IIWebEX/IIWebEX.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IIWebEX;
+				PRODUCT_NAME = IIWebEX;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8113540C20D44B0C274B65DD19E70590 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E4CC258CCF694E867DD72C38D39A12E /* SnapKit.xcconfig */;
@@ -6596,7 +6621,7 @@
 			};
 			name = Release;
 		};
-		9261C76F9F89522016A5F24D0D20F2D4 /* Release */ = {
+		945056CF3F8B54625CE6E6CF5C73451B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B5C49B96DCC5121CD7B22BC7666A069 /* IIWebEX.xcconfig */;
 			buildSettings = {
@@ -6616,32 +6641,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A4FB60819B011C02BB53EB27FE06E1DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28295295AFD1347B54BFCFD7E5CAFBEB /* SDWebImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SDWebImage;
-				PRODUCT_NAME = SDWebImage;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -6859,31 +6859,6 @@
 			};
 			name = Debug;
 		};
-		BAFD294D1C8D474F312B0A57AC4F5F30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17B534D3452E543475E559544F26FA9B /* IIBLL.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/IIBLL/IIBLL-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/IIBLL/IIBLL.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = IIBLL;
-				PRODUCT_NAME = IIBLL;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		C2857EED3F9F07807E5EFA7EF95396AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F404E57150D5A106536EAD2D16B0A173 /* Differentiator.xcconfig */;
@@ -7046,6 +7021,31 @@
 			};
 			name = Release;
 		};
+		F6AE71B9E21C00DC58FCF1FE513EFA13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28295295AFD1347B54BFCFD7E5CAFBEB /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F8EB98643F0D49B3DDE2C9C4BE9D88F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A828519006457CBA92E4CA5FE0ACA06 /* III18N.xcconfig */;
@@ -7098,22 +7098,22 @@
 			};
 			name = Release;
 		};
-		FE489666AE0D8441B32B0042F41B4C98 /* Debug */ = {
+		FF4B9DC3DEC103E919A77C2CBAF3B36B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B5C49B96DCC5121CD7B22BC7666A069 /* IIWebEX.xcconfig */;
+			baseConfigurationReference = 17B534D3452E543475E559544F26FA9B /* IIBLL.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/IIWebEX/IIWebEX-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/IIBLL/IIBLL-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/IIWebEX/IIWebEX.modulemap;
+				MODULEMAP_FILE = Headers/Public/IIBLL/IIBLL.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = IIWebEX;
-				PRODUCT_NAME = IIWebEX;
+				PRODUCT_MODULE_NAME = IIBLL;
+				PRODUCT_NAME = IIBLL;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -7129,8 +7129,8 @@
 		15D59E4F1B3432A84B6E31DBB32CC571 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4FB60819B011C02BB53EB27FE06E1DA /* Debug */,
-				0F22D3805AF7F6C2DF5A1D8D7B0C9F25 /* Release */,
+				4B2E664F911D77393382489E27B2E02E /* Debug */,
+				F6AE71B9E21C00DC58FCF1FE513EFA13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7228,8 +7228,8 @@
 		932730C50BF470AD96717F80E4B3EE96 /* Build configuration list for PBXNativeTarget "IIWebEX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE489666AE0D8441B32B0042F41B4C98 /* Debug */,
-				9261C76F9F89522016A5F24D0D20F2D4 /* Release */,
+				945056CF3F8B54625CE6E6CF5C73451B /* Debug */,
+				7F4F023FE809F1C89C90A181AD039C7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7309,8 +7309,8 @@
 		F3B499B89D801B90195B4E028A2C198B /* Build configuration list for PBXNativeTarget "IIBLL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAFD294D1C8D474F312B0A57AC4F5F30 /* Debug */,
-				1719656293EDC14205E04C7F1B52E8C6 /* Release */,
+				FF4B9DC3DEC103E919A77C2CBAF3B36B /* Debug */,
+				344FD39B171309F97AE288AAFAAAE3F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,8 +1,8 @@
 {
   "name": "IIWebEX",
   "version": "0.1.0",
-  "summary": "A short description of IIWebEX.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "IIWebEX",
+  "description": "IIWebEX\n分层处理iiwebex\nBLL, DAL, USL, Utility\ncisco - webex",
   "homepage": "https://github.com/hatjs880328s/IIWebEX",
   "license": {
     "type": "MIT",
@@ -19,10 +19,9 @@
     "ios": "8.0"
   },
   "pod_target_xcconfig": {
-    "DEFINES_MODULE": "YES",
-    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/Headers/Private/**"
+    "DEFINES_MODULE": "YES"
   },
-  "swift_versions": "4.2",
+  "swift_versions": "5.0",
   "dependencies": {
     "IISwiftBaseUti": [
 
@@ -96,5 +95,5 @@
       ]
     }
   ],
-  "swift_version": "4.2"
+  "swift_version": "5.0"
 }
