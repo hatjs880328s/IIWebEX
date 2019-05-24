@@ -79,12 +79,8 @@ cisco - webex
   s.dependency 'IIBaseComponents'
   
   s.dependency 'HandyJSON'
-  s.dependency 'RxSwift', '5.0.0'
-  s.dependency 'RxCocoa', '5.0.0'
-  s.dependency 'RxRelay', '5.0.0'
-  s.dependency 'RxDataSources', '4.0.1'
-  s.dependency 'Differentiator', '4.0.1'
-
-
+  s.dependency 'RxSwift', '4.3.1'
+  s.dependency 'RxCocoa', '4.3.1'
+  s.dependency 'RxDataSources', '3.1.0'
 
 end
