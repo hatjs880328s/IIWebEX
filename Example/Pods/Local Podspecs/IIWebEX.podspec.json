@@ -1,0 +1,100 @@
+{
+  "name": "IIWebEX",
+  "version": "0.1.0",
+  "summary": "A short description of IIWebEX.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hatjs880328s/IIWebEX",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hatjs880328s": "shanwzh@inspur.com"
+  },
+  "source": {
+    "git": "https://github.com/hatjs880328s/IIWebEX.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/Headers/Private/**"
+  },
+  "swift_versions": "4.2",
+  "dependencies": {
+    "IISwiftBaseUti": [
+
+    ],
+    "IIUIAndBizConfig": [
+
+    ],
+    "IIBLL": [
+
+    ],
+    "IIComponents": [
+
+    ],
+    "IIAOPNBP": [
+
+    ],
+    "IIHTTPRequest": [
+
+    ],
+    "IIOCUtis": [
+
+    ],
+    "IIBaseComponents": [
+
+    ],
+    "HandyJSON": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "RxDataSources": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "DAL",
+      "source_files": "IIWebEX/Classes/DAL/*.*"
+    },
+    {
+      "name": "MODEL",
+      "source_files": "IIWebEX/Classes/MODEL/*.*"
+    },
+    {
+      "name": "Utility",
+      "source_files": "IIWebEX/Classes/Utility/*.*"
+    },
+    {
+      "name": "BLL",
+      "source_files": "IIWebEX/Classes/BLL/*.*"
+    },
+    {
+      "name": "USL",
+      "subspecs": [
+        {
+          "name": "VM",
+          "source_files": "IIWebEX/Classes/USL/VM/*.*"
+        },
+        {
+          "name": "V",
+          "source_files": "IIWebEX/Classes/USL/V/*.*"
+        },
+        {
+          "name": "C",
+          "source_files": "IIWebEX/Classes/USL/C/*.*"
+        }
+      ]
+    }
+  ],
+  "swift_version": "4.2"
+}

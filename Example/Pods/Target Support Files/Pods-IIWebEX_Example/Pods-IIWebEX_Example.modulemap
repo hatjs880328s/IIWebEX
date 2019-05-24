@@ -1,0 +1,6 @@
+module Pods_IIWebEX_Example {
+  umbrella header "Pods-IIWebEX_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

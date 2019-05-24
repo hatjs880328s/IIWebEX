@@ -1,0 +1,6 @@
+module IIWebEX {
+  umbrella header "IIWebEX-umbrella.h"
+
+  export *
+  module * { export * }
+}

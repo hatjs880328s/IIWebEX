@@ -1,0 +1,11 @@
+# use_frameworks!
+
+target 'IIWebEX_Example' do
+  pod 'IIWebEX', :path => '../'
+
+  target 'IIWebEX_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
