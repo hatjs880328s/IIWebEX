@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IIWebEX'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'IIWebEX'
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ cisco - webex
 
   s.source_files = 'IIWebEX/Classes/**/*'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
 
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
@@ -52,9 +52,9 @@ cisco - webex
   s.dependency 'IIOCUtis'
   s.dependency 'IIBaseComponents'
   
-  s.dependency 'HandyJSON', '4.2.0'
-  s.dependency 'RxSwift', '4.3.1'
-  s.dependency 'RxCocoa', '4.3.1'
-  s.dependency 'RxDataSources', '3.1.0'
+  s.dependency 'HandyJSON', '5.0.0'
+  s.dependency 'RxSwift', '5.0.0'
+  s.dependency 'RxCocoa', '5.0.0'
+  s.dependency 'RxDataSources', '4.0.1'
 
 end
