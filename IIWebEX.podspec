@@ -33,40 +33,14 @@ cisco - webex
 
   s.ios.deployment_target = '8.0'
 
-  # s.source_files = 'IIWebEX/Classes/**/*'
+  s.source_files = 'IIWebEX/Classes/**/*'
 
   s.swift_version = '4.2'
 
 
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
 
-  s.subspec 'DAL' do |ss|
-      ss.source_files = 'IIWebEX/Classes/DAL/*.*'
-  end
 
-  s.subspec 'MODEL' do |ss|
-      ss.source_files = 'IIWebEX/Classes/MODEL/*.*'
-  end
-
-  s.subspec 'Utility' do |ss|
-      ss.source_files = 'IIWebEX/Classes/Utility/*.*'
-  end
-
-  s.subspec 'BLL' do |ss|
-      ss.source_files = 'IIWebEX/Classes/BLL/*.*'
-  end
-
-  s.subspec 'USL' do |ss|
-      ss.subspec 'VM' do |sss|
-          sss.source_files = 'IIWebEX/Classes/USL/VM/*.*'
-      end
-      ss.subspec 'V' do |sss|
-          sss.source_files = 'IIWebEX/Classes/USL/V/*.*'
-      end
-      ss.subspec 'C' do |sss|
-          sss.source_files = 'IIWebEX/Classes/USL/C/*.*'
-      end
-  end
 
 
   s.dependency 'IISwiftBaseUti'
