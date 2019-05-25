@@ -66,6 +66,9 @@ public class WebEXModuleInitAction: NSObject {
     /// IMPUserModel.activeInstance()?.userName() ?? ""
     @objc public static var getIMPUserName: (() -> String)?
 
+    /// datepicker进行初始化
+    public static var datepickerVw: IIDatePickerIBLL!
+
     /// 服务自注册
     @objc public func registerService() {
         BeeHive.shareInstance()?.registerService(WebEXIBLL.self, service: WebEXModule.self)

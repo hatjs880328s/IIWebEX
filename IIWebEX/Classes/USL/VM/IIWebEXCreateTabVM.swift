@@ -32,9 +32,6 @@ class CreateTabVM: NSObject {
     var models: IIWebEXModel = IIWebEXModel().createMeetInitSelf()
     
     var bll = WebEXBLL()
-
-    /// 需要进行初始化
-    static var datepickerVw: IIDatePickerIBLL!
     
     override init() {
         super.init()
@@ -104,25 +101,25 @@ class CreateTabVM: NSObject {
         switch index {
         case let indexs where indexs.row == 0 && indexs.section == 1:
             let middleDate = WebEXModuleInitAction.getCurrentDateAfterHalfHour?() ?? Date()//Utilities.getCurrentDateAfterHalfHour()
-            CreateTabVM.datepickerVw.initSelf(haveMinDate: true, each10MinsProgress: false, scrollDate: middleDate, type: 0) { (date) in
+            WebEXModuleInitAction.datepickerVw.initSelf(haveMinDate: true, each10MinsProgress: false, scrollDate: middleDate, type: 0) { (date) in
                 if date == nil { return }
                 self.models.startDate = date!
                 self.modelChange(startTime: date!.dateToString("yyyy-MM-dd HH:mm"), duration: nil)
             }
-            CreateTabVM.datepickerVw.show()
+            WebEXModuleInitAction.datepickerVw.show()
             return nil
         case let indexs where indexs.row == 1 && indexs.section == 1:
             let dateFormater = DateFormatter()
             dateFormater.dateFormat = "HH:mm"
             let scrollDate = dateFormater.date(from: "01:00")
-            CreateTabVM.datepickerVw.initSelf(haveMinDate: false, each10MinsProgress: true, scrollDate: scrollDate, type: 5) { (date) in
+            WebEXModuleInitAction.datepickerVw.initSelf(haveMinDate: false, each10MinsProgress: true, scrollDate: scrollDate, type: 5) { (date) in
                 if date == nil { return }
                 let hours = "\(date!.hours)\(IIWebEXInter().iiwebex_hours)"
                 let mins = date!.minutes == 0 ? "" : "\(date!.minutes)\(IIWebEXInter().iiwebex_mins)"
                 self.models.duration = date!.hours * 60 + date!.minutes
                 self.modelChange(startTime: nil, duration: hours + mins)
             }
-            CreateTabVM.datepickerVw.show()
+            WebEXModuleInitAction.datepickerVw.show()
             return nil
         case let indexs where indexs.row == 1 && indexs.section == 2 :
             let con = SetPwdViewController()
