@@ -66,11 +66,9 @@ public class WebEXModuleInitAction: NSObject {
     /// IMPUserModel.activeInstance()?.userName() ?? ""
     @objc public static var getIMPUserName: (() -> String)?
 
-    /// private init vc function
-    @objc public func getDoorVC() -> UIViewController {
-        let con = WEBEXMeetingListViewController()
-        con.hidesBottomBarWhenPushed = true
-        return con
+    /// 服务自注册
+    @objc public func registerService() {
+        BeeHive.shareInstance()?.registerService(WebEXIBLL.self, service: WebEXModule.self)
     }
 
 }
