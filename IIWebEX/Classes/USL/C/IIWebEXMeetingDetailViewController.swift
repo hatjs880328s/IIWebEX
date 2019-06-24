@@ -13,22 +13,22 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
 
     /// 标题
     var titleTxt: String = IIWebEXInter().iiwebex_meetDetailInfo
-    
+
     var topVw: MeetDetailTopVw?
-    
+
     var contentVw: MeetDetailContentVw?
-    
+
     public var meetModel: IIWebEXVModel?
-    
+
     var webBll = WebEXBLL()
-    
+
     let uti = IIWebEX()
-    
+
     /// 创建成功之后，返回上一级页面需要刷新页面
     var delSuccessBackAction: (() -> Void)?
-    
-    var alertListVw: MoreTableView?
-    
+
+    weak var alertListVw: MoreTableView?
+
     var each10SecTimer: Timer?
 
     /// 参会人员
@@ -46,18 +46,18 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
         initVw()
         setData()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         each10SecTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.each10SecReloadData), userInfo: nil, repeats: true)
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.each10SecTimer?.invalidate()
         self.each10SecTimer = nil
     }
-    
+
     /// 每10S搞一次狀態
     @objc func each10SecReloadData() {
         self.initData(alert: false)
@@ -69,7 +69,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
         self.addNavLeftButtonNormalImage(UIImage(named: "back_before"), navLeftButtonSelectedImage: UIImage(named: "back_after"))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "meet_Detail_"), landscapeImagePhone: UIImage(named: "meet_Detail_"), style: UIBarButtonItem.Style.done, target: self, action: #selector(self.addAlertListVw))
     }
-    
+
     @objc func addAlertListVw() {
         if alertListVw != nil {
             alertListVw?.hidenSelf()
@@ -98,7 +98,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
         topVw = MeetDetailTopVw(frame: CGRect.zero, fatherVw: self.view)
         contentVw = MeetDetailContentVw(frame: CGRect.zero, fatherVw: self.view, topVw: topVw!)
     }
-    
+
     func setData() {
         guard let models = meetModel else { return }
         self.topVw?.setData(model: models)
@@ -106,7 +106,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
         ProgressHUD.shareInstance()?.showProgress(withMessage: "")
         initData(alert: true)
     }
-    
+
     /// 初始化數據調用 & 10S調用一次
     func initData(alert: Bool) {
         guard let models = meetModel else {
@@ -122,7 +122,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
             ProgressHUD.shareInstance()?.remove()
         }
     }
-    
+
     ///加入会议
     func joinMeeting() {
         ProgressHUD.shareInstance()?.showProgress(withMessage: "")
@@ -134,10 +134,10 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
             } else {
                 self?.uti.joinMeeting()
             }
-            
+
         }
     }
-    
+
     /// 删除记录
     @objc func deleteOneItem() {
         let alertAction = UIAlertController(title: IIWebEXInter().iiwebex_deltip, message: IIWebEXInter().iiwebex_deltil, preferredStyle: UIAlertController.Style.alert)
@@ -152,8 +152,8 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
 
     /// 分享
     @objc func share() {
-        webBll.share(iimodel: meetModel) { (con) in
-            self.navigationController?.pushViewController(con, animated: true)
+        webBll.share(iimodel: meetModel) { [weak self](con) in
+            self?.navigationController?.pushViewController(con, animated: true)
         }
     }
 
@@ -163,7 +163,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
         con.vm.initData(source: self.meetModel?.attendees ?? [])
         self.navigationController?.pushViewController(con, animated: true)
     }
-    
+
     /// 代理回调函数
     func progress(index: Int) {
         switch index {
@@ -177,7 +177,7 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
             break
         }
     }
-    
+
     /// 删除操作代码
     func realDelAction() {
         guard let realModelID = self.meetModel?.meetNo else { return }
@@ -190,14 +190,14 @@ class WEBEXMeetingDetailViewController: BaseViewController, MoreTableProtocol {
             self?.navigationController?.popViewController(animated: true)
         }
     }
-    
+
     /// 复制到粘贴
     func getPasterStr() {
         let pas = UIPasteboard.general
         pas.string = webBll.getPastStr(iimodel: self.meetModel)
         WebEXModuleInitAction.showToastAction?(IIWebEXInter().iiwebex_setPasteInfo)
     }
-    
+
     deinit {
         print("iiwebex detail vc deinit...")
     }
