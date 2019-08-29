@@ -9,20 +9,20 @@
 import Foundation
 
 class IIWebEXListEmptyVw: UIView {
-    
+
     var createBtn = UIButton()
-    
+
     var txtLb: UILabel = UILabel()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         createVw()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func createVw() {
         let bgVw = UIView()
         self.addSubview(bgVw)
@@ -55,22 +55,24 @@ class IIWebEXListEmptyVw: UIView {
         }
         txtLb.font = APPUIConfig.uiFont(with: 14)
         txtLb.textColor = APPUIConfig.lineLightGray
-        
+
         let monthTxt = (IIWebEXInter().iiwebex_mins != "mins") ? IIWebEXInter().iiwebex_months : "-"
         let dayTxt = (IIWebEXInter().iiwebex_mins != "mins") ? IIWebEXInter().iiwebex_days : ""
+        let yearTxt = (IIWebEXInter().iiwebex_mins != "mins") ? IIWebEXInter().iiwebex_years : "-"
         let nowDate = Date()
-        let txtInfo = "\(nowDate.month)\(monthTxt)\(nowDate.days)\(dayTxt)"
+        var monthTxts = nowDate.month == 12 ? ("\(nowDate.year + 1)\(yearTxt)\(1)") : ("\(nowDate.month + 1)")
+        let txtInfo = "\(monthTxts)\(monthTxt)\(nowDate.days)\(dayTxt)"
         let realTxt = IIWebEXInter().iiwebex_beforeNoMeet.replace(find: "{}", replaceStr: txtInfo)
-        
+
         //NSAttributedStringKey
         let blackAtt = [NSAttributedString.Key.foregroundColor: APPUIConfig.mainCharColor]
         let range = (realTxt as NSString).range(of: txtInfo)
         let attributeStr = NSMutableAttributedString(string: realTxt)
         attributeStr.addAttributes(blackAtt, range: range)
         txtLb.attributedText = attributeStr
-        
+
         txtLb.textAlignment = .center
-        
+
     }
-    
+
 }
