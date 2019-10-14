@@ -27,7 +27,7 @@ static void * startMMAPFile;
 static u_long nowContentLength = 0;
 
 /// page - size 1M
-static u_long pageSize = 50 * 1024;
+static u_long pageSize = 10 * 1024;
 
 
 /**
@@ -35,16 +35,19 @@ static u_long pageSize = 50 * 1024;
  
  @param fileName custom file name [UUID]
  @param content real str info
+ @param inspurCode new MMAP file - o line info
  */
-+ (void)writeData:(NSString *)fileName fileContent: (NSString *)content {
++ (void)writeData:(NSString *)fileName fileContent: (NSString *)content userInspurCode: (NSString *)inspurCode {
     contents = [content cStringUsingEncoding:NSUTF8StringEncoding];
     if (contents == NULL) { contents = "GMEXEOF" ; }
     memCacheSize = strlen(contents);
     if ((nowContentLength + memCacheSize > pageSize) || nowContentLength == 0) {
+        /// new page add inspurCode 2 first line 
+        contents = [[NSString stringWithFormat:@"%@\n%@", inspurCode, content] cStringUsingEncoding:NSUTF8StringEncoding];
+        if (contents == NULL) { contents = "GMEXEOF" ; }
         NSString *routePath = [NSString stringWithFormat:@"%@",fileName];
         NSString *dirPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"AOPNBPUTFile" ];
         NSString *filePath = [[dirPath stringByAppendingPathComponent:routePath] stringByAppendingPathExtension:@"txt"];
-        NSLog(@"%@",filePath);
         NSFileManager *fileManager = [NSFileManager defaultManager];
         [fileManager createFileAtPath:filePath contents:nil attributes:nil];
         munmap(startMMAPFile, pageSize);

@@ -124,6 +124,9 @@ public class APPUIConfig: NSObject {
     ///日历日期文字颜色
     @objc public static let calendarTimeTextColor = UIColor(red: 136 / 255, green: 136 / 255, blue: 136 / 255, alpha: 1)
 
+    ///工作Navi未选中状态颜色
+    @objc public static var workNaviSubTextColor = UIColor(red: 136 / 255, green: 136 / 255, blue: 136 / 255, alpha: 1)
+
     ///底部TabBar文字 普通状态/选中状态 颜色
     @objc public static var tabBarTextNormalColor = UIColor(red: 151 / 255, green: 158 / 255, blue: 163 / 255, alpha: 1)
     @objc public static var tabBarTextSelectedColor = UIColor(red: 54 / 255, green: 165 / 255, blue: 246 / 255, alpha: 1)
@@ -136,6 +139,9 @@ public class APPUIConfig: NSObject {
 
     ///搜索Bar背景色
     @objc public static var searchBarNewBgColor = UIColor(red: 242 / 255, green: 242 / 255, blue: 242 / 255, alpha: 1)
+
+    ///遮罩层颜色
+    @objc public static var shadowColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.2)
 
     /// 缩放比例（目前默认为1）
     @objc public static let sizeScale: CGFloat = UIScreen.main.bounds.width / 375.0

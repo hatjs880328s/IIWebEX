@@ -69,7 +69,7 @@ public class AOPDiskIOProgress: NSObject {
     }
     
     /// get one file data with file-name
-    @objc dynamic func getOneFileDataWithFilePath(with path: String) -> Data? {
+    @objc func getOneFileDataWithFilePath(with path: String) -> Data? {
         do {
             var resultStr = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             resultStr = resultStr.replace(find: "\0", replaceStr: "")
@@ -82,7 +82,7 @@ public class AOPDiskIOProgress: NSObject {
     
     /// deleate file with filePath
     @discardableResult
-    @objc dynamic func deleateFile(with filePath: String) -> Bool {
+    @objc func deleateFile(with filePath: String) -> Bool {
         return AOPDiskIOProgressUtility().deleateFile(with: filePath)
     }
 }

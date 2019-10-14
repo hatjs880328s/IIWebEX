@@ -57,6 +57,7 @@ static ColorSchemeData *sharedInstance;
     whiteTheme.appFooterWeight = 10;
     whiteTheme.appLineHeaderWeight = 10;
     whiteTheme.appLabelHeaderWeight = 0;
+    whiteTheme.workNaviSubTextColor = RGBA(136, 136, 136, 1);
 
     ColorScheme *blueTheme = [[ColorScheme alloc] init];
     blueTheme.schemeId = ColorThemeBlue;
@@ -76,6 +77,7 @@ static ColorSchemeData *sharedInstance;
     blueTheme.appFooterWeight = 0;
     blueTheme.appLineHeaderWeight = 16;
     blueTheme.appLabelHeaderWeight = 6;
+    blueTheme.workNaviSubTextColor = RGBA(139, 187, 223, 1);
 
     ColorScheme *grayTheme = [[ColorScheme alloc] init];
     grayTheme.schemeId = ColorThemeGray;
@@ -95,6 +97,7 @@ static ColorSchemeData *sharedInstance;
     grayTheme.appFooterWeight = 0;
     grayTheme.appLineHeaderWeight = 16;
     grayTheme.appLabelHeaderWeight = 6;
+    grayTheme.workNaviSubTextColor = RGBA(136, 136, 136, 1);
 
     [schemeArray addObject:whiteTheme];
     [schemeArray addObject:grayTheme];

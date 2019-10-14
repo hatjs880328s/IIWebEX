@@ -98,6 +98,8 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/IIBLL/IIBLL/Classes/BeeHive/BeeHive.bundle"
+  install_resource "${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/FileService/ViewController_ShowTxt.xib"
+  install_resource "${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/QRService/QRShowViewController.xib"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIMJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error.png"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@2x.png"
@@ -108,6 +110,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/IIBLL/IIBLL/Classes/BeeHive/BeeHive.bundle"
+  install_resource "${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/FileService/ViewController_ShowTxt.xib"
+  install_resource "${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/QRService/QRShowViewController.xib"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIMJRefresh/MJRefresh.bundle"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error.png"
   install_resource "${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@2x.png"

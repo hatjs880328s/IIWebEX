@@ -46,7 +46,7 @@ public class APPUIConfigManager: NSObject {
     
     /// 切换根控制器，在切换语言|主题等操作之后
     private func changeRootVc() {
-        (self.actionForLogin as? LoginIBLLOC.Type)?.doLogout()
+        (self.actionForLogin as? LoginIBLLOC.Type)?.refreshMain()
     }
 
     ///初始化主题色
@@ -77,6 +77,7 @@ public class APPUIConfigManager: NSObject {
         APPUIConfig.appFooterWeight = colorScheme.appFooterWeight
         APPUIConfig.appLineHeaderWeight = colorScheme.appLineHeaderWeight
         APPUIConfig.appLabelHeaderWeight = colorScheme.appLabelHeaderWeight
+        APPUIConfig.workNaviSubTextColor = colorScheme.workNaviSubTextColor
     }
     
     /// 主题色修改并更改rootviewcontroller

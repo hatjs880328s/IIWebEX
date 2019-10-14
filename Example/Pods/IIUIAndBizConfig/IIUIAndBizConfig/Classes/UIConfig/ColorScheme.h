@@ -36,6 +36,7 @@ typedef NS_ENUM (NSInteger, ColorSchemeTheme) {
 @property (assign, nonatomic) CGFloat appFooterWeight;
 @property (assign, nonatomic) CGFloat appLineHeaderWeight;
 @property (assign, nonatomic) CGFloat appLabelHeaderWeight;
+@property (strong, nonatomic) UIColor *workNaviSubTextColor;
 
 @end
 

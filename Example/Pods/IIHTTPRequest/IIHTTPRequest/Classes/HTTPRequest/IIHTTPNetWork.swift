@@ -8,6 +8,17 @@
 
 import Foundation
 
+/// 网络接入状态
+@objc public enum IIHTTPCurrentWWANAccessType: Int {
+    case WiFi
+    case gen5
+    case gen4
+    case gen3
+    case gen2
+    case unknown
+    case notReachable
+}
+
 /*
  TODO:
  1.在没有VPN模式下使用ping功能来判定是否有网络[vpn下icmp协议失效]
@@ -33,6 +44,29 @@ public class IIHTTPNetWork: NSObject {
         connectivity.connectivityURLs = [emmIPAdd, aliyunUrl, txUrl, appleUrl, baiduUrl]
         self.setPingHost()
         RealReachability.sharedInstance().startNotifier()
+    }
+
+    /// 获取当前的网络接入方式
+    @objc public func getCurrentNetAccessType() -> IIHTTPCurrentWWANAccessType {
+        var result: IIHTTPCurrentWWANAccessType? = nil
+        let status = RealReachability.sharedInstance()?.currentReachabilityStatus() ?? ReachabilityStatus.RealStatusUnknown
+        switch status {
+        case .RealStatusNotReachable: result = IIHTTPCurrentWWANAccessType.notReachable
+        case ReachabilityStatus.RealStatusViaWiFi: result = IIHTTPCurrentWWANAccessType.WiFi
+        case .RealStatusUnknown: result = .unknown
+        default: break
+        }
+        //
+        let realStatus = RealReachability.sharedInstance()?.currentWWANtype() ?? WWANAccessType.typeUnknown
+        switch realStatus {
+        case .type2G: result = .gen2
+        case .type3G: result = .gen3
+        case .type4G: result = .gen4
+        case .typeUnknown: result = result == nil ? .unknown : result
+        default:
+            break
+        }
+        return result ?? .unknown
     }
     
     /// 设置ping服务器[设置超时时间为10S]

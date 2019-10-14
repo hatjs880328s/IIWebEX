@@ -58,6 +58,9 @@ public class AOPEventUploadCenter: NSObject {
                     let fileName = String(eachItem.split(separator: "/").last!)
                     self.progressAction!(result!, fileName) { resultAction in
                         if resultAction {
+                            var uploadLog = APIEvent()
+                            uploadLog.setBaseInfo(apiName: "此次上传总数为\(allFilepath.count),上传成功一个|已删除1个", time: Date(), requestType: 0)
+                            AOPNBPCoreManagerCenter.getInstance().writeCustomLog(event: uploadLog)
                             AOPDiskIOProgress.getInstance().deleateFile(with: eachItem)
                         }
                     }

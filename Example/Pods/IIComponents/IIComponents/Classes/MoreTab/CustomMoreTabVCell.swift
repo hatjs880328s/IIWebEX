@@ -58,12 +58,14 @@ public class CustomMoreTabVCell: UITableViewCell {
     /// - Parameters:
     ///   - image: 图片
     ///   - titleInfo: title
-    func setInfo(image: UIImage, titleInfo: String, tintColor: UIColor, bgColor: UIColor) {
+    func setInfo(image: UIImage, titleInfo: String, tintColor: UIColor?, bgColor: UIColor) {
         self.titletext.text = titleInfo
-        self.titletext.textColor = tintColor
+        self.titletext.textColor = tintColor == nil ? APPUIConfig.mainCharColor : tintColor!
         self.titleIcon.image = image
-        self.titleIcon.tintColor = tintColor
-        self.titleIcon.setRenderImg()
+        if tintColor != nil {
+            self.titleIcon.tintColor = tintColor!
+            self.titleIcon.setRenderImg()
+        }
         self.backgroundColor = bgColor
     }
     

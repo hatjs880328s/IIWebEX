@@ -14,6 +14,35 @@ import Foundation
 import IISwiftBaseUti
 
 class AOPMmapSwiftUtility: NSObject {
+
+    static var parametersJoinedCharacter: String = "|"
+
+    static var dateFormatStr: String = "yyyy-MM-dd HH:mm:ss"
+
+    static var userID: String {
+        return MMAPUserInfo.userID
+    }
+
+    static var userName: String {
+        return MMAPUserInfo.userName
+    }
+
+    static var enterpriseID: Int32 {
+        return MMAPUserInfo.enterpriseID
+    }
+
+    static var deviceType: String {
+        return MMAPUserInfo.deviceType
+    }
+
+    static var osVersion: String  {
+        return MMAPUserInfo.osVersion
+    }
+
+    static  var appVersion: String  {
+        return MMAPUserInfo.appVersion
+    }
+
     override init() {
         super.init()
     }
@@ -31,7 +60,14 @@ class AOPMmapSwiftUtility: NSObject {
     static func write2MmapFileSys(name filename: String, fileContent content: String) {
 
         GCDUtils.toMianThreadProgressSome {
-            AOPMmapOCUtility.writeData(filename, fileContent: content)
+            AOPMmapOCUtility.writeData(filename, fileContent: content, userInspurCode: initUserInfo())
         }
+    }
+
+    private static func initUserInfo()  -> String {
+        return userID + parametersJoinedCharacter + userName + parametersJoinedCharacter +
+            enterpriseID.description
+            + parametersJoinedCharacter + deviceType +
+            parametersJoinedCharacter + osVersion + parametersJoinedCharacter + appVersion
     }
 }

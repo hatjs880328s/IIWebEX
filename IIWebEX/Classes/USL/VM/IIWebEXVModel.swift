@@ -83,7 +83,7 @@ class IIWebEXVModel: NSObject {
     
     ///[詳情]已开始 ： 尚未开始
     var meetState: (isStart: Bool, startBtnTxt: String) {
-        var result: Bool = realTime.addMinutes(duration).distance(to: Date()) < 0 ? true : false
+        var result: Bool = realTime.addMinutes(duration).distances(to: Date()) < 0 ? true : false
         var infoText: String = ""
         if let emailInfo = WebEXModuleInitAction.impUserModel?.value(forKey: "email") as? String {
             //infoText = emailInfo == createPerson ? IIWebEXInter().iiwebex_startjoin : IIWebEXInter().iiwebex_joinstart
@@ -105,7 +105,7 @@ class IIWebEXVModel: NSObject {
         } else {
             result = false
         }
-        let resultTime = realTime.addMinutes(duration).distance(to: Date()) < 0 ? true : false
+        let resultTime = realTime.addMinutes(duration).distances(to: Date()) < 0 ? true : false
         result = result && resultTime
         var infoText: String = ""
         if let emailInfo = WebEXModuleInitAction.impUserModel?.value(forKey: "email") as? String {

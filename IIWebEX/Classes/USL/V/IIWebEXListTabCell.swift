@@ -58,7 +58,7 @@ class ListTabCell: UITableViewCell {
         } else {
             result = false
         }
-        let resultTime = startDate!.addMinutes(duration!).distance(to: Date()) < 0 ? true : false
+        let resultTime = startDate!.addMinutes(duration!).distances(to: Date()) < 0 ? true : false
         result = result && resultTime
         self.setState(isStart: result, startBtnTxt: stateBtnTxt)
     }

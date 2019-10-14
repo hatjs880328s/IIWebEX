@@ -170,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				E0E7104C802B4C5176CEF815 /* [CP] Copy Pods Resources */,
+				4EE43D6FEE78FFD984AB4676 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +284,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4EE43D6FEE78FFD984AB4676 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IIWebEX_Example/Pods-IIWebEX_Example-resources.sh",
+				"${PODS_ROOT}/IIBLL/IIBLL/Classes/BeeHive/BeeHive.bundle",
+				"${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/FileService/ViewController_ShowTxt.xib",
+				"${PODS_ROOT}/IIComponents/IIComponents/Classes/IMPPlus/Plugs/QRService/QRShowViewController.xib",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIMJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error.png",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@2x.png",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@3x.png",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success.png",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success@2x.png",
+				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeHive.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ViewController_ShowTxt.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QRShowViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IIWebEX_Example/Pods-IIWebEX_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D9750564D7A4B63A466E2C4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,38 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0E7104C802B4C5176CEF815 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IIWebEX_Example/Pods-IIWebEX_Example-resources.sh",
-				"${PODS_ROOT}/IIBLL/IIBLL/Classes/BeeHive/BeeHive.bundle",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIMJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error.png",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@2x.png",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_error@3x.png",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success.png",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success@2x.png",
-				"${PODS_ROOT}/IIOCUtis/IIOCUtis/Classes/IIProgressHUD/jg_hud_success@3x.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BeeHive.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_error@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jg_hud_success@3x.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IIWebEX_Example/Pods-IIWebEX_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
