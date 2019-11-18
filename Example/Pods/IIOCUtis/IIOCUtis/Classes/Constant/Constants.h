@@ -230,6 +230,7 @@
 #define TODOREQUIREMENT         [NSString stringWithFormat:@"%d%@",[IMPUserModel activeInstance].id,@"KrequirementForTodo"]
 #define KrequirementForTodo     [[NSUserDefaults standardUserDefaults]objectForKey:TODOREQUIREMENT]
 
+//配置项字段Key
 //是否开启web应用旋转
 #define WebAutorotateConfig     [NSString stringWithFormat:@"%@_%d.webautorotateconfig_2",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
 #define IIAOPNBPServiceConfig     [NSString stringWithFormat:@"%@_%d.IIAOPNBPServiceconfig_1",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
@@ -239,7 +240,8 @@
 #define kIsShowCustomerSevice   [NSString stringWithFormat:@"%@_%d.isshowcustomersevice_1",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
 #define CommonFunctionsConfig   [NSString stringWithFormat:@"%@_%d.CommonFunctions_1",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
 #define kWorkPortlet            [NSString stringWithFormat:@"%@_%d.WorkPortlet_1",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
-
+//是否在进入频道时强制拉取消息
+#define kPullMessageConfig      [NSString stringWithFormat:@"%@_%d.PullMessage_1",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]
 
 //clientId
 #define keyForClientId          [NSString stringWithFormat:@"clientId_%@_%d_2",[IMPUserModel activeInstance].enterprise.code,[IMPUserModel activeInstance].id]

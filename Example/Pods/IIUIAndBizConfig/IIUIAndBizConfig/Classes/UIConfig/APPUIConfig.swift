@@ -67,6 +67,9 @@ public class APPUIConfig: NSObject {
 
     // ========================ui3.0start ==============================
 
+    ///网盘中按钮的背景蓝色
+    @objc public static let btnBGBlue = UIColor(red: 219 / 255, green: 240 / 255, blue: 255 / 255, alpha: 1)
+
     ///日程中时间轴青色背景
     @objc public static let calendarTimeLineBG = UIColor(red: 54 / 255, green: 165 / 255, blue: 246 / 255, alpha: 0.05)
 

@@ -117,8 +117,11 @@ class WebEXBLL: NSObject {
     /// 分享
     func share(iimodel: IIWebEXVModel?, pushAction:@escaping (_ con: UIViewController) -> Void) {
         let shareStr = self.getPastStr(iimodel: iimodel) ?? ""
-        guard let vc = WebEXModuleInitAction.innerShare?(shareStr) else { return }
-        pushAction(vc)
+        let service = (BeeHive.shareInstance()?.createService(ShareIBLL.self) as? ShareIBLL)
+        if service?.judgeCommunicateExist() ?? false {
+            guard let vc = service?.getSelectShareTarget(bySharedString: shareStr) else { return }
+            pushAction(vc)
+        }
     }
     
     /// 分享内容
