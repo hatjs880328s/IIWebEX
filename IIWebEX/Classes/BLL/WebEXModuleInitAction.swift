@@ -66,6 +66,9 @@ public class WebEXModuleInitAction: NSObject {
     /// IMPUserModel.activeInstance()?.userName() ?? ""
     @objc public static var getIMPUserName: (() -> String)?
 
+    /// umshare - custom
+    @objc public static var innerShare: ((_ str: String) -> UIViewController?)?
+
     /// datepicker进行初始化
     public static var datepickerVw: IIDatePickerIBLL!
 
