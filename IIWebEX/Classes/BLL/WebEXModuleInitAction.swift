@@ -22,6 +22,13 @@ public class WebEXModuleInitAction: NSObject {
 
     @objc public static var webEXAPIAction: ( () -> String )?
 
+    /// IIAPIStruct().webEXAPIHeader 获取api默认header
+    @objc static var webEXAPIHeader: [String: String] {
+        return webEXAPIHeaderAction?() ?? [: ]
+    }
+
+    @objc public static var webEXAPIHeaderAction: ( () -> [String: String] )?
+
     /// IIAPIStruct().webEXOneItemAPI 获取某条信息 & 密码
     @objc static var webEXOneItemAPI: String {
         return webEXOneItemAPIAction?() ?? ""

@@ -16,7 +16,7 @@ class WebEXDAL: NSObject {
     
     /// 获取列表信息
     func getMeetList(alertInfo: Bool, success:@escaping (_ arr: NSArray) -> Void, failAction: @escaping () -> Void) {
-        IIHTTPRequest.startRequest(showAlertInfo: alertInfo, method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXAPI, params: nil, timeOut: 30, successAction: { (responseArr) in
+        IIHTTPRequest.startRequest(showAlertInfo: alertInfo, method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXAPI, params: nil, header: WebEXModuleInitAction.webEXAPIHeader, timeOut: 30, successAction: { (responseArr) in
             if let arrInfo = responseArr.arrValue {
                 success(arrInfo)
             } else {
@@ -30,7 +30,7 @@ class WebEXDAL: NSObject {
     /// 获取某条信息 & 密码
     func getMeetBy(alertInfo: Bool, id: String, success:@escaping (_ arr: NSDictionary) -> Void, failAction: @escaping () -> Void) {
         let realID = id.replace(find: " ", replaceStr: "")
-        IIHTTPRequest.startRequest(showAlertInfo: alertInfo, method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXOneItemAPI + "/\(realID)", params: nil, timeOut: 30, successAction: { (responseArr) in
+        IIHTTPRequest.startRequest(showAlertInfo: alertInfo, method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXOneItemAPI + "/\(realID)", params: nil, header: WebEXModuleInitAction.webEXAPIHeader, timeOut: 30, successAction: { (responseArr) in
             if let arrInfo = responseArr.dicValue {
                 success(arrInfo)
             } else {
@@ -43,7 +43,7 @@ class WebEXDAL: NSObject {
     
     /// 创建一个会议 * 安排一个会议
     func createMeeting(params: [String: Any], success:@escaping () -> Void, failAction: @escaping () -> Void) {
-        IIHTTPRequest.startRequest(method: IIHTTPMethod.post, url: WebEXModuleInitAction.webEXAPICreate, params: params, timeOut: 30, successAction: { (response) in
+        IIHTTPRequest.startRequest(method: IIHTTPMethod.post, url: WebEXModuleInitAction.webEXAPICreate, params: params, header: WebEXModuleInitAction.webEXAPIHeader, timeOut: 30, successAction: { (response) in
             if let boolValue = response.anyValue as? Bool {
                 if boolValue {
                     success()
@@ -61,7 +61,7 @@ class WebEXDAL: NSObject {
     
     /// 获取session-ticket
     func getSK(success:@escaping (_ dic: NSDictionary) -> Void, failAction: @escaping () -> Void) {
-        IIHTTPRequest.startRequest(method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXSKAPI, params: nil, timeOut: 30, successAction: { (response) in
+        IIHTTPRequest.startRequest(method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXSKAPI, params: nil, header: WebEXModuleInitAction.webEXAPIHeader, timeOut: 30, successAction: { (response) in
             if let dic = response.dicValue {
                 success(dic)
             } else {
@@ -75,7 +75,7 @@ class WebEXDAL: NSObject {
     /// 删除某条记录
     func removeOneItem(with id: String, success:@escaping () -> Void, failAction: @escaping () -> Void) {
         let realID = id.replace(find: " ", replaceStr: "")
-        IIHTTPRequest.startRequest(method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXRemoveAPI  + "/\(realID)", params: nil, timeOut: 30, successAction: { (response) in
+        IIHTTPRequest.startRequest(method: IIHTTPMethod.get, url: WebEXModuleInitAction.webEXRemoveAPI  + "/\(realID)", params: nil, header: WebEXModuleInitAction.webEXAPIHeader, timeOut: 30, successAction: { (response) in
             if let boolValue = response.anyValue as? Bool {
                 if boolValue {
                     success()
